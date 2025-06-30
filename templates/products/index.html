@@ -1,0 +1,27 @@
+{% extends '/base.html' %}
+{% block content%}
+<a href="{{url_for('products.create')}}" class="btn btn-primary">ADD New Product</a>
+<h1>All Products</h1>
+
+
+<table class="table-primary">
+    <tr class="table-primary">
+        <td class="table-primary">ID</td>
+        <td class="table-primary">Name</td>
+        <td class="table-primary">Description</td>
+        <td class="table-primary">Image</td>
+
+    </tr>
+    {% for product in products %}
+        <tr class="table-primary">
+        <td class="table-primary">{{product.id}}</td>
+        <td class="table-primary">{{product.name}}</td>
+        <td class="table-primary">{{product.description}}</td>
+        <td class="table-primary">{{product.image}}</td>
+        <td class="table-primary"><a href="{{product.show_url}}" class="btn btn-secondary">Show</a></td>
+        <td><a href="{{product.delete_url}}" class="btn btn-danger">Delete Product</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

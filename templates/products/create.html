@@ -1,0 +1,27 @@
+
+{% extends '/base.html' %}
+{% block content%}
+
+<form method="post">
+  <div class="mb-3">
+    <label for="name" class="form-label" >Name</label>
+    <input type="text" name="name" class="form-control" id="name" aria-describedby="namehelp">
+    <div id="namehelp" class="form-text">Add Product name or title.</div>
+  </div>
+    <div class="input-group mb-3">
+  <span class="input-group-text">$</span>
+  <span class="input-group-text">0.00</span>
+  <input name="price" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+</div>
+    <div class="mb-3">
+  <label for="description" class="form-label">Description</label>
+  <textarea name="description" class="form-control" id="description" rows="3"></textarea>
+</div>
+<div class="mb-3">
+  <label for="image" class="form-label">Image</label>
+  <input name="image" class="form-control" type="file" id="image">
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
