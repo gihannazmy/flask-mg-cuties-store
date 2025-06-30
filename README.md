@@ -1,0 +1,1 @@
+# flask-mg-cuties-store
